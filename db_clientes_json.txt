@@ -1,0 +1,20 @@
+{
+    "nome": "Diego",
+    "email": "diego@gmail.com",
+    "telefone": "31999998888",
+    "endereco": "Rua 1, 99",
+    "cidade": "RP",
+    "estado": "MG",
+    "nomePlano": "Boa Saude",
+    "indicacao": "José Maria"
+},
+{
+    "nome": "Claudia",
+    "email": "claudia@gmail.com",
+    "telefone": "31999997777",
+    "endereco": "Rua 2, 77",
+    "cidade": "RP",
+    "estado": "MG",
+    "nomePlano": "Saude boa",
+    "indicacao": "Joaquim"
+}

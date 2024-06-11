@@ -1,14 +1,12 @@
 package org.quarkusclub;
 
 import lombok.Data;
-import lombok.Setter;
 import java.util.UUID;
 
 @Data
 public class ClienteDTO {
-    @Setter
+
     private UUID id;
-    @Setter
     private String responseMessage;
     private String nome;
     private String cpf;
