@@ -24,7 +24,6 @@ import jakarta.persistence.Entity;
  * }
  */
 
-//Comenta por que como não criei o banco de dados ainda, ele fica reclamando da ligação do hibernate com, o banco de dados
 // @Entity
 // public class MyEntity extends PanacheEntity {
 //     public String field;

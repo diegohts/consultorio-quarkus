@@ -17,7 +17,7 @@ public class CadastroClienteService {
         return cliente;
     }
 
-    public ClienteDTO atualizarParcialCliente(UUID idCliente, ClienteDTO cliente) {
+    public ClienteDTO atualizarParcialCliente(UUID idCliente, ClienteDTO cliente) throws BusinessException {
         for(ClienteDTO c : clientes) {
             if(c.getId().equals(idCliente)) {
                 if(cliente.getNome() != null) {
@@ -50,10 +50,10 @@ public class CadastroClienteService {
                 return c;
             }
         }
-        return null;
+        throw new BusinessException("Cliente nao encontrado");
     }
 
-    public ClienteDTO atualizarTodosCamposCliente(ClienteDTO cliente) {
+    public ClienteDTO atualizarTodosCamposCliente(ClienteDTO cliente) throws BusinessException {
         for(ClienteDTO c : clientes) {
             if(c.getId().equals(cliente.getId())) {
                 c.setNome(cliente.getNome());
@@ -68,10 +68,13 @@ public class CadastroClienteService {
                 return c;
             }
         }
-        return null;
+        throw new BusinessException("Cliente nao encontrado");
     }
 
     public List<ClienteDTO> consultarClientes() {
+        if(clientes == null) {
+            throw new RuntimeException("Banco de dados nao inicializado");
+        }
         return clientes;
     }
 
